@@ -1,0 +1,14 @@
+---
+title: "Trabajo con plantas extintas"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introducción
+
+Trabajo con base de datos de plantas  extintas según la IUCN
+
+## Subtitulo
