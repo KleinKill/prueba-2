@@ -11,6 +11,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
   Trabajo con base de datos de plantas  extintas según la [*IUCN*](https://www.iucnredlist.org/)
 
-## Subtitulo
+## Trabajando con los datos
+
+Vamos a partir con cargar los paquetes necesarios para trabajar
+
+```{r}
+library(tidyverse)
+library(readr)
+plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+```
+
+
+Ahora voy a leer los datos con los que voy a trabajar.
 
 
