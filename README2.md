@@ -50,12 +50,12 @@ plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesda
 \#\#Filtrammos los datos de Chile por especie para resolver el ejemplo 1
 
 ``` r
-Plantas_Chile = plants %>% dplyr::filter(country == "Chile") %>% dplyr::select(binomial_name, country)
+Plantas_Chile = plants %>% dplyr::filter(country == "Chile") %>% dplyr::select(binomial_name, country, red_list_category)
 Plantas_Chile
 ```
 
-    ## # A tibble: 2 x 2
-    ##   binomial_name           country
-    ##   <chr>                   <chr>  
-    ## 1 Santalum fernandezianum Chile  
-    ## 2 Sophora toromiro        Chile
+    ## # A tibble: 2 x 3
+    ##   binomial_name           country red_list_category  
+    ##   <chr>                   <chr>   <chr>              
+    ## 1 Santalum fernandezianum Chile   Extinct            
+    ## 2 Sophora toromiro        Chile   Extinct in the Wild
