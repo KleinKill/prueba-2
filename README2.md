@@ -27,6 +27,8 @@ library(tidyverse)
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
+Ahora voy a leer los datos con los que voy a trabajar.
+
 ``` r
 library(readr)
 plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
@@ -45,4 +47,15 @@ plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesda
 
     ## See spec(...) for full column specifications.
 
-Ahora voy a leer los datos con los que voy a trabajar.
+\#\#Filtrammos los datos de Chile por especie para resolver el ejemplo 1
+
+``` r
+Plantas_Chile = plants %>% dplyr::filter(country == "Chile") %>% dplyr::select(binomial_name, country)
+Plantas_Chile
+```
+
+    ## # A tibble: 2 x 2
+    ##   binomial_name           country
+    ##   <chr>                   <chr>  
+    ## 1 Santalum fernandezianum Chile  
+    ## 2 Sophora toromiro        Chile

@@ -17,11 +17,22 @@ Vamos a partir con cargar los paquetes necesarios para trabajar
 
 ```{r}
 library(tidyverse)
-library(readr)
-plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+
 ```
 
 
 Ahora voy a leer los datos con los que voy a trabajar.
 
+```{r}
+library(readr)
+plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+```
+##Filtrammos los datos de Chile por especie para resolver el ejemplo 1
+
+```{r}
+
+Plantas_Chile = plants %>% dplyr::filter(country == "Chile") %>% dplyr::select(binomial_name, country)
+Plantas_Chile
+
+```
 
